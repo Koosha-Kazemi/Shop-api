@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'ShopApi',
+
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
