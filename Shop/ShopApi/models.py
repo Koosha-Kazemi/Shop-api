@@ -19,5 +19,11 @@ class Product(models.Model):
         return f'name : {self.name} price : {self.price}  discount : {self.discount} stock : {self.stock}'
 
 
+class OptionProduct(models.Model):
+    title = models.CharField(max_length=30)
+    value = models.CharField(max_length=50)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f'{self.product.name} -> {self.title} : {self.value}'
 
