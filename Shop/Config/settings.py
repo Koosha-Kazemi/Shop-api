@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'Product',
     'Account',
+    'Media'
 
     'drf_yasg',
 ]
