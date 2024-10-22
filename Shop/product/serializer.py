@@ -16,3 +16,8 @@ class ProductSerializer(ModelSerializer):
         fields = '__all__'
 
 
+
+class OptionProductSerializer(ModelSerializer):
+    class Meta:
+        model = OptionProduct
+        fields = '__all__'
