@@ -1,5 +1,7 @@
 from django.db import models
 
+from Shop.Media.models import ImageMedia
+
 class Category(models.Model):
     name = models.CharField(max_length=40)
 
@@ -14,7 +16,6 @@ class Product(models.Model):
     price = models.PositiveIntegerField()
     discount = models.PositiveIntegerField()
     stock = models.BooleanField()
-
     def __str__(self):
         return f'name : {self.name} price : {self.price}  discount : {self.discount} stock : {self.stock}'
 
@@ -26,8 +27,6 @@ class OptionProduct(models.Model):
 
     def __str__(self):
         return f'{self.product.name} -> {self.title} : {self.value}'
-
-
 
 
 
