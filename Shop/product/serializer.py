@@ -1,4 +1,3 @@
-from django.db.models import Model
 from rest_framework.serializers import ModelSerializer
 
 from .models import *
@@ -21,3 +20,9 @@ class OptionProductSerializer(ModelSerializer):
     class Meta:
         model = OptionProduct
         fields = '__all__'
+
+
+class ImageSerializer(ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = 'image/'
