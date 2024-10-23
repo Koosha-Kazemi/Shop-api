@@ -1,6 +1,5 @@
 from django.db import models
 
-from Shop.Media.models import ImageMedia
 
 class Category(models.Model):
     name = models.CharField(max_length=40)
@@ -33,5 +32,5 @@ class OptionProduct(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image = models.ForeignKey('media.ImageMedia', on_delete=models.PROTECT)
-    image_index = models.PositiveIntegerField(default=0)
+    image = models.ImageField(upload_to='images/')
+
